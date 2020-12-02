@@ -179,7 +179,7 @@ $(document).on('keypress', function (e) {
     }
   });
 });
-var backgroundList = ['/bg1.872b44c1.jpg', '/bg2.04ed6363.jpg', '/bg3.679b1ee8.jpg', '/bg4.8cce38e1.jpg', '/bg5.89ed94c8.jpg', '/bg6.45bb34b0.jpg', '/bg7.b5aee188.jpg', '/bg8.fa179a37.jpg', '/bg9.c994849f.jpg', '/bg10.bfdddf78.jpg', '/bg11.3694e258.jpg']; // 添加背景变换功能
+var backgroundList = ['bg1.872b44c1.jpg', 'bg2.04ed6363.jpg', 'bg3.679b1ee8.jpg', 'bg4.8cce38e1.jpg', 'bg5.89ed94c8.jpg', 'bg6.45bb34b0.jpg', 'bg7.b5aee188.jpg', 'bg8.fa179a37.jpg', 'bg9.c994849f.jpg', 'bg10.bfdddf78.jpg', 'bg11.3694e258.jpg']; // 添加背景变换功能
 
 var fn = function fn() {
   var url = getBgUrl();
@@ -201,4 +201,4 @@ var getBgUrl = function getBgUrl() {
   return backgroundList[random];
 };
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.2c8ce380.js.map
+//# sourceMappingURL=main.7b59a99b.js.map
