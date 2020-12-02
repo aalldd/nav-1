@@ -167,6 +167,15 @@
     background-repeat: no-repeat;
   }
 }
+@media (max-width: 500px) {
+  html {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("bg9.5d0b7356.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+}
 .refresh{
     position: fixed;
     bottom: 30px;
@@ -194,9 +203,6 @@ ul,
 ol {
   list-style: none;
 }
-body {
-  background-color: #ddd;
-}
 .icon {
   width: 1em;
   height: 1em;
@@ -214,4 +220,4 @@ img {
 }
 
 
-/*# sourceMappingURL=style.e8e45db8.css.map */
+/*# sourceMappingURL=style.155e9907.css.map */

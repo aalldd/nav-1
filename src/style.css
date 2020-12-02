@@ -167,6 +167,15 @@
     background-repeat: no-repeat;
   }
 }
+@media (max-width: 500px) {
+  html {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./images/bg9.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+}
 .refresh{
     position: fixed;
     bottom: 30px;
@@ -193,9 +202,6 @@
 ul,
 ol {
   list-style: none;
-}
-body {
-  background-color: #ddd;
 }
 .icon {
   width: 1em;
