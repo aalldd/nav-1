@@ -174,43 +174,11 @@
     width: 20px;
     height: 20px;
     color: #fff;
+    display: none;
 }
 .refresh>.icon{
     width: 100%;
     height: 100%;
-}
-.bgWrapper{
-  display: none;
-}
-.call1{
-  background: url('bg2.c596ab74.jpg');
-}
-.call2{
-  background: url('bg3.0f05dd0e.jpg');
-}
-.call3{
-  background: url('bg4.30a46127.jpg');
-}
-.call4{
-  background: url('bg5.efe2bfcb.jpg');
-}
-.call5{
-  background: url('bg6.38a7d64a.jpg');
-}
-.call6{
-  background: url('bg7.09bc9ffa.jpg');
-}
-.call7{
-  background: url('bg8.e78852b4.jpg');
-}
-.call8{
-  background: url('bg9.5d0b7356.jpg');
-}
-.call9{
-  background: url('bg10.4711e5fd.jpg');
-}
-.call10{
-  background: url('bg11.8d31bb32.jpg');
 }
 /* css reset */
 * {
@@ -246,4 +214,4 @@ img {
 }
 
 
-/*# sourceMappingURL=style.b491e2bd.css.map */
+/*# sourceMappingURL=style.e8e45db8.css.map */
