@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,
     minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-    <title>前航-前端导航网站</title>
+    <title>宅男guide</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="globalHeader">
         <form action="https://www.baidu.com/s" 
-        class="searchForm" method="get"> 
-            <input type="text" name="wd">
+        class="searchForm" method="get">
+            <div class="charter-wrapper">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-zhainan"></use>
+                </svg>
+            </div>
+            <input type="text" name="wd" placeholder="宅男guide" class="search">
             <button type="submit">搜索</button>
         </form>
     </header>
@@ -27,7 +32,12 @@
             </li>
         </ul>
     </main>
-    <script src="//at.alicdn.com/t/font_2239961_ysec3n862m.js"></script>
+    <div class="refresh">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-shuaxin1"></use>
+        </svg>
+    </div>
+    <script src="//at.alicdn.com/t/font_2239961_8lk4e9l6jqi.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="main.js"></script>
 </body>
