@@ -165,12 +165,13 @@
     background-image: url("./images/bg1.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }
 @media (max-width: 500px) {
-  html {
+  body {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-image: url("./images/bg9.jpg");
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -183,7 +184,6 @@
     width: 20px;
     height: 20px;
     color: #fff;
-    display: none;
 }
 .refresh>.icon{
     width: 100%;

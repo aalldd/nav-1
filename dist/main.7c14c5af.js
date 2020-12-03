@@ -169,36 +169,51 @@ $('.addButton').on('click', function () {
 window.onbeforeunload = function () {
   var string = JSON.stringify(hashMap);
   localStorage.setItem('hashMap', string);
-};
+}; // 输入一些喜欢的网站的首字母就自动跳转过去，有点不方便暂时注释掉
+// $(document).on('keypress', (e) => {
+//     const { key } = e
+//     hashMap.forEach(item => {
+//         if (item.logo.toLowerCase() === key) {
+//             window.open(item.url, '_self')
+//         }
+//     })
+// })
 
-$(document).on('keypress', function (e) {
-  var key = e.key;
-  hashMap.forEach(function (item) {
-    if (item.logo.toLowerCase() === key) {
-      window.open(item.url, '_self');
-    }
-  });
-});
-var backgroundList = ['/bg1.872b44c1.jpg', '/bg2.04ed6363.jpg', '/bg3.679b1ee8.jpg', '/bg4.8cce38e1.jpg', '/bg5.89ed94c8.jpg', '/bg6.45bb34b0.jpg', '/bg7.b5aee188.jpg', '/bg8.fa179a37.jpg', '/bg9.c994849f.jpg', '/bg10.bfdddf78.jpg', '/bg11.3694e258.jpg']; // 添加背景变换功能
+
+var backgroundList = [];
+var viewPortWidth = document.body.clientWidth;
+
+for (var i = 1; i < 12; i++) {
+  backgroundList.push("http://192.168.124.4:8888/images/bg".concat(i, ".jpg"));
+} // 添加背景变换功能
+
 
 var fn = function fn() {
   var url = getBgUrl();
-  var back = $('body').css('backgroundImage').substring(26);
-  console.log(url);
-  console.log(back);
+  var back = $('body').css('backgroundImage').substring(26); // 只有图片和上一次不一样的时候 才改变背景
 
   if (url !== back) {
     $('body').css("background-image", "url(".concat(url, ")"));
   } else {
     fn();
   }
-};
+}; // 只有我打开静态资源服务器的时候，才将刷新背景图的按钮显示出来
+
+
+if (backgroundList.length === 0) {
+  $('.refresh').css("display", 'none');
+}
 
 $('.refresh').on('click', fn);
 
 var getBgUrl = function getBgUrl() {
   var random = Math.floor(Math.random() * backgroundList.length);
   return backgroundList[random];
-};
+}; // 背景图自动变化
+
+
+var autoChange = setInterval(function () {
+  fn();
+}, 10000);
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.2c8ce380.js.map
+//# sourceMappingURL=main.7c14c5af.js.map
