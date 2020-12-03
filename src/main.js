@@ -58,33 +58,36 @@ window.onbeforeunload = () => {
 //         }
 //     })
 // })
-let backgroundList=[]
-let viewPortWidth=document.body.clientWidth
-for(let i=1;i<12;i++){
-    backgroundList.push(`http://192.168.124.4:8888/images/bg${i}.jpg`)
-}
-// 添加背景变换功能
-const fn=()=>{
-    let url = getBgUrl()
-    let back=$('body').css('backgroundImage').substring(26)
-    // 只有图片和上一次不一样的时候 才改变背景
-    if(url!==back){
-            $('body').css("background-image", `url(${url})`)    
-    }else{
-        fn()
-    }
-}
-// 只有我打开静态资源服务器的时候，才将刷新背景图的按钮显示出来
-if(backgroundList.length===0){
-    $('.refresh').css("display",'none')
-}
-$('.refresh').on('click', fn)
 
-const getBgUrl = () => {
-    let random = Math.floor(Math.random() * backgroundList.length)
-    return backgroundList[random]
-}
+
+// 由于代码部署到github发现，github会默认给每一个请求添加https的协议，所以静态资源无法访问成功
+// let backgroundList=[]
+// let viewPortWidth=document.body.clientWidth
+// for(let i=1;i<12;i++){
+//     backgroundList.push(`https://192.168.124.4:8888/images/bg${i}.jpg`)
+// }
+// 添加背景变换功能
+// const fn=()=>{
+//     let url = getBgUrl()
+//     let back=$('body').css('backgroundImage').substring(26)
+//     // 只有图片和上一次不一样的时候 才改变背景
+//     if(url!==back){
+//             $('body').css("background-image", `url(${url})`)    
+//     }else{
+//         fn()
+//     }
+// }
+// 只有我打开静态资源服务器的时候，才将刷新背景图的按钮显示出来
+// if(backgroundList.length===0){
+//     $('.refresh').css("display",'none')
+// }
+// $('.refresh').on('click', fn)
+
+// const getBgUrl = () => {
+//     let random = Math.floor(Math.random() * backgroundList.length)
+//     return backgroundList[random]
+// }
 // 背景图自动变化
-let autoChange=setInterval(()=>{
-    fn()
-},10000)
+// let autoChange=setInterval(()=>{
+//     fn()
+// },10000)

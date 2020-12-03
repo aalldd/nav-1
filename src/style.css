@@ -184,6 +184,7 @@
     width: 20px;
     height: 20px;
     color: #fff;
+    display: none;
 }
 .refresh>.icon{
     width: 100%;
